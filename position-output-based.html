@@ -1,0 +1,62 @@
+<!--
+Output-Based Question:
+
+Design a header with the following properties:
+
+-Stays at the top of the page when scrolling (use position: fixed).
+-
+Contains a button that, when clicked, toggles a dropdown menu positioned absolutely.
+-->
+<html>
+<head>
+<style>
+	*{
+		padding:0;
+		margin:0;
+	}
+	header{
+		position:fixed;
+		top:0%;
+		width:100%;
+		z-index:1000;
+		background:red;
+	}
+	select{
+		position:absolute;
+		top:40%;
+		display:none;
+	}
+</style>
+<script>
+count=0
+function togle(){
+	count++
+	let menu=document.querySelector('select');
+	if(count==1){
+	menu.style="display:block"
+	}
+	else {
+	count=0
+	menu.style="display:none"
+	}
+}
+</script>
+</head>
+<body>
+	<header>
+		<button onClick="togle()">Click to toggle</button>
+	</header>
+	<select>
+		<option>option1</option>
+		<option>option2</option>
+		<option>option3</option>
+	</select>
+</body>
+</html>
+
+
+
+
+
+
+
